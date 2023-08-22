@@ -9,6 +9,7 @@ import {
 } from '@baseswapfi/sdk-core';
 import { abi } from '@uniswap/swap-router-contracts/artifacts/contracts/interfaces/ISwapRouter02.sol/ISwapRouter02.json';
 import { Trade as V2Trade } from '@baseswapfi/v2-sdk';
+
 import {
   encodeRouteToPath,
   FeeOptions,
@@ -20,7 +21,7 @@ import {
   SelfPermit,
   toHex,
   Trade as V3Trade,
-} from '@baseswapfi/sdk-core';
+} from '@baseswapfi/v3-sdk2';
 import invariant from 'tiny-invariant';
 import JSBI from 'jsbi';
 import { ADDRESS_THIS, MSG_SENDER } from './constants';

@@ -1,12 +1,7 @@
 import { Route as V2RouteSDK, Pair } from '@baseswapfi/v2-sdk';
 import { Protocol } from './protocol';
-import {
-  Currency,
-  Price,
-  Token,
-  Route as V3RouteSDK,
-  Pool,
-} from '@baseswapfi/sdk-core';
+import { Currency, Price, Token } from '@baseswapfi/sdk-core';
+import { Route as V3RouteSDK, Pool } from '@baseswapfi/v3-sdk2';
 import { MixedRouteSDK } from './mixedRoute/route';
 
 export interface IRoute<

@@ -1,12 +1,6 @@
 import { Interface } from '@ethersproject/abi';
-import {
-  Percent,
-  Token,
-  validateAndParseAddress,
-  FeeOptions,
-  Payments,
-  toHex,
-} from '@baseswapfi/sdk-core';
+import { Percent, Token, validateAndParseAddress } from '@baseswapfi/sdk-core';
+import { FeeOptions, Payments, toHex } from '@baseswapfi/v3-sdk2';
 import { abi } from '@uniswap/swap-router-contracts/artifacts/contracts/interfaces/IPeripheryPaymentsWithFeeExtended.sol/IPeripheryPaymentsWithFeeExtended.json';
 import JSBI from 'jsbi';
 

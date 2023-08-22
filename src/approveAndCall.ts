@@ -1,16 +1,14 @@
 import { Interface } from '@ethersproject/abi';
 import invariant from 'tiny-invariant';
 import { abi } from '@uniswap/swap-router-contracts/artifacts/contracts/interfaces/IApproveAndCall.sol/IApproveAndCall.json';
+import { Currency, Percent, Token } from '@baseswapfi/sdk-core';
 import {
   MintSpecificOptions,
   IncreaseSpecificOptions,
   NonfungiblePositionManager,
   Position,
   toHex,
-  Currency,
-  Percent,
-  Token,
-} from '@baseswapfi/sdk-core';
+} from '@baseswapfi/v3-sdk2';
 import JSBI from 'jsbi';
 
 // condensed version of v3-sdk AddLiquidityOptions containing only necessary swap + add attributes

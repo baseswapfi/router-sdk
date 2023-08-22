@@ -5,10 +5,12 @@ import {
   Percent,
   Price,
   TradeType,
+} from '@baseswapfi/sdk-core';
+import {
   Pool,
   Route as V3RouteSDK,
   Trade as V3TradeSDK,
-} from '@baseswapfi/sdk-core';
+} from '@baseswapfi/v3-sdk2';
 import {
   Pair,
   Route as V2RouteSDK,

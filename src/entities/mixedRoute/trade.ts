@@ -7,9 +7,8 @@ import {
   CurrencyAmount,
   TradeType,
   Token,
-  BestTradeOptions,
-  Pool,
 } from '@baseswapfi/sdk-core';
+import { BestTradeOptions, Pool } from '@baseswapfi/v3-sdk2';
 import { Pair } from '@baseswapfi/v2-sdk';
 import invariant from 'tiny-invariant';
 import { ONE, ZERO } from '../../constants';

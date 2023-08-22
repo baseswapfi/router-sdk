@@ -1,5 +1,6 @@
 import { pack } from '@ethersproject/solidity';
-import { Currency, Token, Pool } from '@baseswapfi/sdk-core';
+import { Currency, Token } from '@baseswapfi/sdk-core';
+import { Pool } from '@baseswapfi/v3-sdk2';
 import { Pair } from '@baseswapfi/v2-sdk';
 import { MixedRouteSDK } from '../entities/mixedRoute/route';
 import { V2_FEE_PATH_PLACEHOLDER } from '../constants';
