@@ -1,4 +1,5 @@
-import { Currency, Token, Pool } from '@baseswapfi/sdk-core';
+import { Currency, Token } from '@baseswapfi/sdk-core';
+import { Pool } from '@baseswapfi/v3-sdk2';
 import { Pair } from '@baseswapfi/v2-sdk';
 import { MixedRouteSDK } from '../entities/mixedRoute/route';
 
