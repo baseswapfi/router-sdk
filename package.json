@@ -1,7 +1,7 @@
 {
   "name": "@baseswapfi/router-sdk",
   "version": "1.0.13",
-  "author": "0xShoegazer",
+  "author": "@Uniswap",
   "module": "dist/router-sdk.esm.js",
   "license": "MIT",
   "main": "dist/index.js",
