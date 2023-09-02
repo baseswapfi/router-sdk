@@ -963,10 +963,10 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
-"@baseswapfi/sdk-core@^1.0.20":
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/sdk-core/-/sdk-core-1.0.20.tgz#6afa773c9865c33db23afa971c7d202e3871e29c"
-  integrity sha512-F8ER3dlxEPisiSHRe8WYdj1msoLUIV6rBrT6syfzBUBQfTvZsYeb09oo6qJZbaruDjcNih4Yhayknq3ZX6tNlA==
+"@baseswapfi/sdk-core@^1.0.21":
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/sdk-core/-/sdk-core-1.0.21.tgz#766327496c3f93840f1c4351e85aafbd195a7d8c"
+  integrity sha512-Gx3SOjy2Er88/0xVO2f7fW4y4ivA7zbJXr/ZG/ivQw8JBnfWo5y1LlWyynC5BLqgtG73FmkyPndnRaKVLYHj/Q==
   dependencies:
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/address" "^5.0.2"
@@ -981,23 +981,23 @@
     toformat "^2.0.0"
     typechain "^5.2.0"
 
-"@baseswapfi/v2-sdk@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/v2-sdk/-/v2-sdk-1.0.14.tgz#fe13b42f98ac48bb6fde28dd5945d4dc02ba6604"
-  integrity sha512-CpifdFZKPSZzEnjHB0+06YPZDlQ4KgHaJwWEnnT171E4+kj3lqtHFcFKlcbua1vXRhH21m9c2UMVi0xSisBLPA==
+"@baseswapfi/v2-sdk@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/v2-sdk/-/v2-sdk-1.0.15.tgz#a19ff630bbe57acb88f3f9cc7f6fe93d5de7d555"
+  integrity sha512-fP4Qeep6008C1WPwmySyqxJ14wPkSlpwj/0YPEHayFiSNWt+LA4D4Ymqw455E1TFOZeN4j8O9SSot0V4AcSFow==
   dependencies:
-    "@baseswapfi/sdk-core" "^1.0.20"
+    "@baseswapfi/sdk-core" "^1.0.21"
     "@ethersproject/address" "^5.0.2"
     "@ethersproject/solidity" "^5.0.9"
     jsbi "^3.1.4"
     tiny-invariant "^1.1.0"
 
-"@baseswapfi/v3-sdk2@^3.10.14":
-  version "3.10.14"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.14.tgz#a980c1cf1a4176db06e078b23c6d1950e631e258"
-  integrity sha512-Jo1Jn61LmHEjMXS3uLIdkrbH4wouQ+55ph/U+DF07iEguLFDEJlL3FydDksrLh7b/8DuRU7KDRqgixPXJUel6g==
+"@baseswapfi/v3-sdk2@^3.10.15":
+  version "3.10.15"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.15.tgz#0a3998fa26eee8d6bbcbb5512699cc1dfec4c4f9"
+  integrity sha512-WRX911AB9YG5ixVFZPOs729Rcbh+F8iM/rC9FEorXCZ5AOumnKOrhMhlYp6Xi+6qAp+fLH2XEOk5C9+tHQfK3A==
   dependencies:
-    "@baseswapfi/sdk-core" "^1.0.20"
+    "@baseswapfi/sdk-core" "^1.0.21"
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/solidity" "^5.0.9"
     jsbi "^3.1.4"
