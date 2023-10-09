@@ -1010,12 +1010,12 @@
     jsbi "^3.1.4"
     tiny-invariant "^1.1.0"
 
-"@baseswapfi/v3-sdk2@^3.10.16":
-  version "3.10.16"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.16.tgz#7349ce8b4a1fd1fef59a0b99201d2c5c74f13aca"
-  integrity sha512-7NgEQyBkdh0Bf4NSIyTlF3SF60eHHjpYZrdIahjWm+ykjUqHtJ0biEf7KRPgIUN8mUZ+NI4CjQu7KfTeogacpw==
+"@baseswapfi/v3-sdk2@^3.10.17":
+  version "3.10.17"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.17.tgz#bc7eda6ca273738c25d9e409132d86b39d201787"
+  integrity sha512-o3qVSH6DaFWYm4vnvz1YF6ZcODUvXhPXkbwdGAPejp2/eUtCddwLjOOy8oJd5EPB1d45UXvHuywKIrDnU8jH7Q==
   dependencies:
-    "@baseswapfi/sdk-core" "^1.0.22"
+    "@baseswapfi/sdk-core" "^1.0.26"
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/solidity" "^5.0.9"
     jsbi "^3.1.4"
