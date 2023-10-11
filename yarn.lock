@@ -981,10 +981,10 @@
     toformat "^2.0.0"
     typechain "^5.2.0"
 
-"@baseswapfi/v2-sdk@^1.0.17":
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/v2-sdk/-/v2-sdk-1.0.17.tgz#d038bb6718a4129b77fb48e651eeb040d7693da9"
-  integrity sha512-i3DGbumyewAbY74V8dRpoep7u/QIEREV+Vi2cEd3+wedok2kbH1+5ddr2gI83Hi90gGuszqtG4LuvzL2u4zZoQ==
+"@baseswapfi/v2-sdk@^1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/v2-sdk/-/v2-sdk-1.0.18.tgz#62ac9f9cf4d964c879150f6173983499935e59cd"
+  integrity sha512-aFtsa4xkArfdtSo/JIYlogc5cQfnuHV3oPZUuV4t1pc7VEyYVgupnH54dKolCl8go/21FxO7qPnqP/U7/Fzgcg==
   dependencies:
     "@baseswapfi/sdk-core" "^1.0.26"
     "@ethersproject/address" "^5.0.2"
