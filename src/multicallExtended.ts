@@ -1,7 +1,7 @@
 import { Interface } from '@ethersproject/abi';
 import { BigintIsh } from '@baseswapfi/sdk-core';
 import { Multicall, toHex } from '@baseswapfi/v3-sdk2';
-import { abi } from '@uniswap/swap-router-contracts/artifacts/contracts/interfaces/IMulticallExtended.sol/IMulticallExtended.json';
+import artifact from '@uniswap/swap-router-contracts/artifacts/contracts/interfaces/IMulticallExtended.sol/IMulticallExtended.json';
 
 // deadline or previousBlockhash
 export type Validation = BigintIsh | string;
@@ -15,7 +15,7 @@ function validateAndParseBytes32(bytes32: string): string {
 }
 
 export abstract class MulticallExtended {
-  public static INTERFACE: Interface = new Interface(abi);
+  public static INTERFACE: Interface = new Interface(artifact.abi);
 
   /**
    * Cannot be constructed.

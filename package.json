@@ -1,6 +1,6 @@
 {
   "name": "@baseswapfi/router-sdk",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "author": "@Uniswap",
   "module": "dist/router-sdk.esm.js",
   "license": "MIT",

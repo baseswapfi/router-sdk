@@ -1,7 +1,7 @@
 import { Interface } from '@ethersproject/abi';
 import { Percent, Token, validateAndParseAddress } from '@baseswapfi/sdk-core';
 import { FeeOptions, Payments, toHex } from '@baseswapfi/v3-sdk2';
-import { abi } from '@uniswap/swap-router-contracts/artifacts/contracts/interfaces/IPeripheryPaymentsWithFeeExtended.sol/IPeripheryPaymentsWithFeeExtended.json';
+import artifact from '@uniswap/swap-router-contracts/artifacts/contracts/interfaces/IPeripheryPaymentsWithFeeExtended.sol/IPeripheryPaymentsWithFeeExtended.json';
 import JSBI from 'jsbi';
 
 function encodeFeeBips(fee: Percent): string {
@@ -9,7 +9,7 @@ function encodeFeeBips(fee: Percent): string {
 }
 
 export abstract class PaymentsExtended {
-  public static INTERFACE: Interface = new Interface(abi);
+  public static INTERFACE: Interface = new Interface(artifact.abi);
 
   /**
    * Cannot be constructed.
