@@ -981,6 +981,24 @@
     toformat "^2.0.0"
     typechain "^5.2.0"
 
+"@baseswapfi/sdk-core@^1.0.40":
+  version "1.0.40"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/sdk-core/-/sdk-core-1.0.40.tgz#04663406f5e4efc14c9a65ea73c3d79d9db320e4"
+  integrity sha512-8x1Z0utjvrKWDJpzC/q/CAyUIwDZI4kjIqPdqhgwcuDqWiVJqjIIE480T6ZDWjiKHuar5zzXpxs5mO/A2GGqnQ==
+  dependencies:
+    "@ethersproject/abi" "^5.0.12"
+    "@ethersproject/address" "^5.0.2"
+    "@ethersproject/contracts" "^5"
+    "@ethersproject/providers" "5"
+    "@ethersproject/solidity" "^5.0.9"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    ethers "^5.4.7"
+    jsbi "^3.1.4"
+    tiny-invariant "^1.1.0"
+    toformat "^2.0.0"
+    typechain "^5.2.0"
+
 "@baseswapfi/v2-sdk@^1.0.20":
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/@baseswapfi/v2-sdk/-/v2-sdk-1.0.20.tgz#b683d740dae1cce5ebb1351dd8cd1b782deff1b8"
@@ -992,12 +1010,12 @@
     jsbi "^3.1.4"
     tiny-invariant "^1.1.0"
 
-"@baseswapfi/v3-sdk2@^3.10.19":
-  version "3.10.19"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.19.tgz#df68d882996baf35346a5790f7a3ca625bd53d1f"
-  integrity sha512-LyavsaXrIoKuqbVGXer6DNwiZHXs8cFPvXUaY+yJlX7LmuozmXn0EINZXd9rM1ScbdvMKpZMFRln4M4bJ/iG+g==
+"@baseswapfi/v3-sdk2@^3.10.22":
+  version "3.10.22"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.22.tgz#fb80d81f44f0fd098c91641f30f25c99eaf24452"
+  integrity sha512-VbSIu8ZJJmhw3RAjZQYAqeV575x2dO9iRb52wXvS5csKwHawEHV5tUYqo7isuiqOVosUFID8dWsUYyDeP9wh5Q==
   dependencies:
-    "@baseswapfi/sdk-core" "^1.0.30"
+    "@baseswapfi/sdk-core" "^1.0.40"
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/solidity" "^5.0.9"
     jsbi "^3.1.4"
