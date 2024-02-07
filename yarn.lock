@@ -981,10 +981,10 @@
     toformat "^2.0.0"
     typechain "^5.2.0"
 
-"@baseswapfi/sdk-core@^1.0.40":
-  version "1.0.40"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/sdk-core/-/sdk-core-1.0.40.tgz#04663406f5e4efc14c9a65ea73c3d79d9db320e4"
-  integrity sha512-8x1Z0utjvrKWDJpzC/q/CAyUIwDZI4kjIqPdqhgwcuDqWiVJqjIIE480T6ZDWjiKHuar5zzXpxs5mO/A2GGqnQ==
+"@baseswapfi/sdk-core@^1.0.41":
+  version "1.0.41"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/sdk-core/-/sdk-core-1.0.41.tgz#e5090f37e89dd378822dd2375f24d7ad90bc571b"
+  integrity sha512-DR+LmwYErvsSNlk1yTn/YjZgG8L4XH9Vb2dAbAmO94YPZf34Wqo3LiTJrrXwusq0YH4BHNJXFYO3siRA+BzvUA==
   dependencies:
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/address" "^5.0.2"
@@ -1010,12 +1010,12 @@
     jsbi "^3.1.4"
     tiny-invariant "^1.1.0"
 
-"@baseswapfi/v3-sdk2@^3.10.22":
-  version "3.10.22"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.22.tgz#fb80d81f44f0fd098c91641f30f25c99eaf24452"
-  integrity sha512-VbSIu8ZJJmhw3RAjZQYAqeV575x2dO9iRb52wXvS5csKwHawEHV5tUYqo7isuiqOVosUFID8dWsUYyDeP9wh5Q==
+"@baseswapfi/v3-sdk2@^3.10.23":
+  version "3.10.23"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.23.tgz#80c3500954290ba6714f612795bfa225e46f8d32"
+  integrity sha512-ZhgPJI9or339JT4/xV3lpm8+mgEIZHN8MBfllXq1dtfgEBr2JzvErDcyfPnIhfv1m/nBb1TYaHJYZVHx15NIkw==
   dependencies:
-    "@baseswapfi/sdk-core" "^1.0.40"
+    "@baseswapfi/sdk-core" "^1.0.41"
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/solidity" "^5.0.9"
     jsbi "^3.1.4"
