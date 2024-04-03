@@ -963,10 +963,10 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
-"@baseswapfi/sdk-core@^1.0.36", "@baseswapfi/sdk-core@^1.0.43", "@baseswapfi/sdk-core@^1.0.44":
-  version "1.0.44"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/sdk-core/-/sdk-core-1.0.44.tgz#d876fe500251eda8e3cbccacc287544961265925"
-  integrity sha512-aKf1Js9u8kimwf3JsoaHFwOQYFG7inG97sQhQqhGeBaEonUJD71vmCsaG9653bt451v1lWI3Ig0IwDs/+UWQ+A==
+"@baseswapfi/sdk-core@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/sdk-core/-/sdk-core-1.2.1.tgz#e8234d5d0730828e067dc4c2515dcc30acdd68a0"
+  integrity sha512-E0qHCyaUPIw+U3zxcvF0LxOw+Dc6fH9KSIA7Q8odSOlYM5RjjV1AuXYSwWwV5bQ56wpzQR4YxEkiu6ec+gQ6bw==
   dependencies:
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/address" "^5.0.2"
@@ -981,23 +981,23 @@
     toformat "^2.0.0"
     typechain "^5.2.0"
 
-"@baseswapfi/v2-sdk@^1.0.26":
-  version "1.0.26"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/v2-sdk/-/v2-sdk-1.0.26.tgz#c67ae1b461d6664c5b7f3f4ef7c64c6b8ff6cb61"
-  integrity sha512-KNqCoi1CS0dEpKyrGJONHs8AgjqwSWEGnPwkt2KNKx2kBjbJB8+OsNnsCoXHpnHaHMkFZOQz3/CpYOXn1/dRRw==
+"@baseswapfi/v2-sdk@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/v2-sdk/-/v2-sdk-1.1.0.tgz#a96a5356e6fa4f40656209b67d3b33219a818b37"
+  integrity sha512-RFw7JmrydQgJKt5INzMQd/Bgw9h7YZZxupm/qn8v+7XQx3/FJvA9vdIVTK6rxvObqS31BktDG1GKLReWs72klA==
   dependencies:
-    "@baseswapfi/sdk-core" "^1.0.36"
+    "@baseswapfi/sdk-core" "^1.2.1"
     "@ethersproject/address" "^5.0.2"
     "@ethersproject/solidity" "^5.0.9"
     jsbi "^3.1.4"
     tiny-invariant "^1.1.0"
 
-"@baseswapfi/v3-sdk2@^3.10.24":
-  version "3.10.24"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.24.tgz#36bba60f9c244361aa33efb344528464b12051f3"
-  integrity sha512-upEcK3KW+4FihxyXR/RSG9RMFVPlAX8RDEUYjOcdOCj+NAfxBGNPa3FrYD94n0kg4Q+eXGO+H21iq29Je077AQ==
+"@baseswapfi/v3-sdk2@^3.10.25":
+  version "3.10.25"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.25.tgz#027672472abb54369328c2ffbcf053ebdb2acf04"
+  integrity sha512-dGWPk34JUAvHmysA/3RQvDCFeAlCblZ0vazUa0ilT1sJjfGCHkXu3/pgO3nFbs50S2R3y0asWpLjGJN0A1Rf6w==
   dependencies:
-    "@baseswapfi/sdk-core" "^1.0.43"
+    "@baseswapfi/sdk-core" "^1.2.1"
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/solidity" "^5.0.9"
     jsbi "^3.1.4"
