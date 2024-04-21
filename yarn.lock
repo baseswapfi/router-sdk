@@ -992,10 +992,10 @@
     jsbi "^3.1.4"
     tiny-invariant "^1.1.0"
 
-"@baseswapfi/v3-sdk2@^3.10.25":
-  version "3.10.25"
-  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.10.25.tgz#027672472abb54369328c2ffbcf053ebdb2acf04"
-  integrity sha512-dGWPk34JUAvHmysA/3RQvDCFeAlCblZ0vazUa0ilT1sJjfGCHkXu3/pgO3nFbs50S2R3y0asWpLjGJN0A1Rf6w==
+"@baseswapfi/v3-sdk2@^3.11.0":
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/@baseswapfi/v3-sdk2/-/v3-sdk2-3.11.0.tgz#8e49a297d4e4bd56d1d48037f211e5b7726bdafd"
+  integrity sha512-UjJ92KOVwQI5tlcGhtRma+FZwrMxCrJyxuah1BzFXfuBt63sZ+ata8tqrwgfvrrwtuj75hj6NLowlN5Swn/kpw==
   dependencies:
     "@baseswapfi/sdk-core" "^1.2.1"
     "@ethersproject/abi" "^5.0.12"

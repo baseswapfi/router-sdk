@@ -1,6 +1,6 @@
 {
   "name": "@baseswapfi/router-sdk",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "@Uniswap",
   "module": "dist/router-sdk.esm.js",
   "license": "MIT",
@@ -28,7 +28,7 @@
   "dependencies": {
     "@baseswapfi/sdk-core": "^1.2.1",
     "@baseswapfi/v2-sdk": "^1.1.0",
-    "@baseswapfi/v3-sdk2": "^3.10.25",
+    "@baseswapfi/v3-sdk2": "^3.11.0",
     "@uniswap/swap-router-contracts": "1.1.0",
     "jsbi": "^3.1.4"
   },
