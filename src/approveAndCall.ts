@@ -1,20 +1,18 @@
-import { Interface } from '@ethersproject/abi';
-import invariant from 'tiny-invariant';
-import artifact from '@uniswap/swap-router-contracts/artifacts/contracts/interfaces/IApproveAndCall.sol/IApproveAndCall.json';
-import { Currency, Percent, Token } from '@baseswapfi/sdk-core';
+import { Interface } from '@ethersproject/abi'
+import invariant from 'tiny-invariant'
+import artifact from '@uniswap/swap-router-contracts/artifacts/contracts/interfaces/IApproveAndCall.sol/IApproveAndCall.json'
+import { Currency, Percent, Token } from '@baseswapfi/sdk-core'
 import {
   MintSpecificOptions,
   IncreaseSpecificOptions,
   NonfungiblePositionManager,
   Position,
   toHex,
-} from '@baseswapfi/v3-sdk2';
-import JSBI from 'jsbi';
+} from '@baseswapfi/v3-sdk2'
+import JSBI from 'jsbi'
 
 // condensed version of v3-sdk AddLiquidityOptions containing only necessary swap + add attributes
-export type CondensedAddLiquidityOptions =
-  | Omit<MintSpecificOptions, 'createPool'>
-  | IncreaseSpecificOptions;
+export type CondensedAddLiquidityOptions = Omit<MintSpecificOptions, 'createPool'> | IncreaseSpecificOptions
 
 export enum ApprovalTypes {
   NOT_REQUIRED = 0,
@@ -25,14 +23,12 @@ export enum ApprovalTypes {
 }
 
 // type guard
-export function isMint(
-  options: CondensedAddLiquidityOptions
-): options is Omit<MintSpecificOptions, 'createPool'> {
-  return Object.keys(options).some(k => k === 'recipient');
+export function isMint(options: CondensedAddLiquidityOptions): options is Omit<MintSpecificOptions, 'createPool'> {
+  return Object.keys(options).some(k => k === 'recipient')
 }
 
 export abstract class ApproveAndCall {
-  public static INTERFACE: Interface = new Interface(artifact.abi);
+  public static INTERFACE: Interface = new Interface(artifact.abi)
 
   /**
    * Cannot be constructed.
@@ -40,47 +36,29 @@ export abstract class ApproveAndCall {
   private constructor() {}
 
   public static encodeApproveMax(token: Token): string {
-    return ApproveAndCall.INTERFACE.encodeFunctionData('approveMax', [
-      token.address,
-    ]);
+    return ApproveAndCall.INTERFACE.encodeFunctionData('approveMax', [token.address])
   }
 
   public static encodeApproveMaxMinusOne(token: Token): string {
-    return ApproveAndCall.INTERFACE.encodeFunctionData('approveMaxMinusOne', [
-      token.address,
-    ]);
+    return ApproveAndCall.INTERFACE.encodeFunctionData('approveMaxMinusOne', [token.address])
   }
 
   public static encodeApproveZeroThenMax(token: Token): string {
-    return ApproveAndCall.INTERFACE.encodeFunctionData('approveZeroThenMax', [
-      token.address,
-    ]);
+    return ApproveAndCall.INTERFACE.encodeFunctionData('approveZeroThenMax', [token.address])
   }
 
   public static encodeApproveZeroThenMaxMinusOne(token: Token): string {
-    return ApproveAndCall.INTERFACE.encodeFunctionData(
-      'approveZeroThenMaxMinusOne',
-      [token.address]
-    );
+    return ApproveAndCall.INTERFACE.encodeFunctionData('approveZeroThenMaxMinusOne', [token.address])
   }
 
   public static encodeCallPositionManager(calldatas: string[]): string {
-    invariant(calldatas.length > 0, 'NULL_CALLDATA');
+    invariant(calldatas.length > 0, 'NULL_CALLDATA')
 
     if (calldatas.length == 1) {
-      return ApproveAndCall.INTERFACE.encodeFunctionData(
-        'callPositionManager',
-        calldatas
-      );
+      return ApproveAndCall.INTERFACE.encodeFunctionData('callPositionManager', calldatas)
     } else {
-      const encodedMulticall = NonfungiblePositionManager.INTERFACE.encodeFunctionData(
-        'multicall',
-        [calldatas]
-      );
-      return ApproveAndCall.INTERFACE.encodeFunctionData(
-        'callPositionManager',
-        [encodedMulticall]
-      );
+      const encodedMulticall = NonfungiblePositionManager.INTERFACE.encodeFunctionData('multicall', [calldatas])
+      return ApproveAndCall.INTERFACE.encodeFunctionData('callPositionManager', [encodedMulticall])
     }
   }
   /**
@@ -96,19 +74,16 @@ export abstract class ApproveAndCall {
     addLiquidityOptions: CondensedAddLiquidityOptions,
     slippageTolerance: Percent
   ): string {
-    let {
-      amount0: amount0Min,
-      amount1: amount1Min,
-    } = position.mintAmountsWithSlippage(slippageTolerance);
+    let { amount0: amount0Min, amount1: amount1Min } = position.mintAmountsWithSlippage(slippageTolerance)
 
     // position.mintAmountsWithSlippage() can create amounts not dependenable in scenarios
     // such as range orders. Allow the option to provide a position with custom minimum amounts
     // for these scenarios
     if (JSBI.lessThan(minimalPosition.amount0.quotient, amount0Min)) {
-      amount0Min = minimalPosition.amount0.quotient;
+      amount0Min = minimalPosition.amount0.quotient
     }
     if (JSBI.lessThan(minimalPosition.amount1.quotient, amount1Min)) {
-      amount1Min = minimalPosition.amount1.quotient;
+      amount1Min = minimalPosition.amount1.quotient
     }
 
     if (isMint(addLiquidityOptions)) {
@@ -123,7 +98,7 @@ export abstract class ApproveAndCall {
           amount1Min: toHex(amount1Min),
           recipient: addLiquidityOptions.recipient,
         },
-      ]);
+      ])
     } else {
       return ApproveAndCall.INTERFACE.encodeFunctionData('increaseLiquidity', [
         {
@@ -133,25 +108,22 @@ export abstract class ApproveAndCall {
           amount1Min: toHex(amount1Min),
           tokenId: toHex(addLiquidityOptions.tokenId),
         },
-      ]);
+      ])
     }
   }
 
-  public static encodeApprove(
-    token: Currency,
-    approvalType: ApprovalTypes
-  ): string {
+  public static encodeApprove(token: Currency, approvalType: ApprovalTypes): string {
     switch (approvalType) {
       case ApprovalTypes.MAX:
-        return ApproveAndCall.encodeApproveMax(token.wrapped);
+        return ApproveAndCall.encodeApproveMax(token.wrapped)
       case ApprovalTypes.MAX_MINUS_ONE:
-        return ApproveAndCall.encodeApproveMaxMinusOne(token.wrapped);
+        return ApproveAndCall.encodeApproveMaxMinusOne(token.wrapped)
       case ApprovalTypes.ZERO_THEN_MAX:
-        return ApproveAndCall.encodeApproveZeroThenMax(token.wrapped);
+        return ApproveAndCall.encodeApproveZeroThenMax(token.wrapped)
       case ApprovalTypes.ZERO_THEN_MAX_MINUS_ONE:
-        return ApproveAndCall.encodeApproveZeroThenMaxMinusOne(token.wrapped);
+        return ApproveAndCall.encodeApproveZeroThenMaxMinusOne(token.wrapped)
       default:
-        throw 'Error: invalid ApprovalType';
+        throw 'Error: invalid ApprovalType'
     }
   }
 }
