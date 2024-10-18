@@ -464,7 +464,6 @@ export class MixedRouteTrade<TInput extends Currency, TOutput extends Currency, 
     invariant(currencyAmountIn === nextAmountIn || currentPools.length > 0, 'INVALID_RECURSION')
 
     const amountIn = nextAmountIn.wrapped
-    const tokenOut = currencyOut.wrapped
     for (let i = 0; i < pools.length; i++) {
       const pool = pools[i]
       // pool irrelevant
