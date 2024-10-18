@@ -15,8 +15,10 @@ export interface IRoute<TInput extends Currency, TOutput extends Currency, TPool
 }
 
 // V2 route wrapper
-export class RouteV2<TInput extends Currency, TOutput extends Currency> extends V2RouteSDK<TInput, TOutput>
-  implements IRoute<TInput, TOutput, Pair> {
+export class RouteV2<TInput extends Currency, TOutput extends Currency>
+  extends V2RouteSDK<TInput, TOutput>
+  implements IRoute<TInput, TOutput, Pair>
+{
   public readonly protocol: Protocol = Protocol.V2
   public readonly pools: Pair[]
 
@@ -27,8 +29,10 @@ export class RouteV2<TInput extends Currency, TOutput extends Currency> extends 
 }
 
 // V3 route wrapper
-export class RouteV3<TInput extends Currency, TOutput extends Currency> extends V3RouteSDK<TInput, TOutput>
-  implements IRoute<TInput, TOutput, V3Pool> {
+export class RouteV3<TInput extends Currency, TOutput extends Currency>
+  extends V3RouteSDK<TInput, TOutput>
+  implements IRoute<TInput, TOutput, V3Pool>
+{
   public readonly protocol: Protocol = Protocol.V3
   public readonly path: Token[]
 
@@ -39,9 +43,10 @@ export class RouteV3<TInput extends Currency, TOutput extends Currency> extends 
 }
 
 // Mixed route wrapper
-
-export class MixedRoute<TInput extends Currency, TOutput extends Currency> extends MixedRouteSDK<TInput, TOutput>
-  implements IRoute<TInput, TOutput, Pair | V3Pool> {
+export class MixedRoute<TInput extends Currency, TOutput extends Currency>
+  extends MixedRouteSDK<TInput, TOutput>
+  implements IRoute<TInput, TOutput, Pair | V3Pool>
+{
   public readonly protocol: Protocol = Protocol.MIXED
 
   constructor(mixedRoute: MixedRouteSDK<TInput, TOutput>) {

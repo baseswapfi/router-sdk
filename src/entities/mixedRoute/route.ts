@@ -1,5 +1,5 @@
 import invariant from 'tiny-invariant'
-import { Currency, Price } from '@baseswapfi/sdk-core'
+import { Currency, Price, Token } from '@baseswapfi/sdk-core'
 import { isValidTokenPath } from '../../utils/isValidTokenPath'
 import { getPathCurrency } from '../../utils/pathCurrency'
 import { TPool } from '../../utils/TPool'
@@ -29,7 +29,7 @@ export class MixedRouteSDK<TInput extends Currency, TOutput extends Currency> {
     invariant(pools.length > 0, 'POOLS')
 
     const chainId = pools[0].chainId
-    const allOnSameChain = pools.every(pool => pool.chainId === chainId)
+    const allOnSameChain = pools.every((pool) => pool.chainId === chainId)
     invariant(allOnSameChain, 'CHAIN_IDS')
 
     this.pathInput = getPathCurrency(input, pools[0])
@@ -38,7 +38,14 @@ export class MixedRouteSDK<TInput extends Currency, TOutput extends Currency> {
     const wrappedInput = input.wrapped
     invariant(pools[0].involvesToken(wrappedInput), 'INPUT')
 
-    invariant(pools[pools.length - 1].involvesToken(output.wrapped), 'OUTPUT')
+    invariant(pools[0].involvesToken(this.pathInput as Token), 'INPUT')
+    const lastPool = pools[pools.length - 1]
+    // if (lastPool instanceof V4Pool) {
+    //   invariant(lastPool.involvesToken(output) || lastPool.involvesToken(output.wrapped), 'OUTPUT')
+    // } else {
+    //   invariant(lastPool.involvesToken(output.wrapped as Token), 'OUTPUT')
+    // }
+    invariant(lastPool.involvesToken(output.wrapped as Token), 'OUTPUT')
 
     /**
      * Normalizes token0-token1 order and selects the next token/fee step to add to the path
